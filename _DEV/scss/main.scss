@@ -1,12 +1,13 @@
-@use "sass:color";
+// @use 'sass:color';
+// @use 'sass:map';
 
-@import 'variables';
-@import 'mixins';
-// @import 'vendor/include-media';
-@import 'vendor/normalize';
-// @import 'vendor/boilerplate';
-@import 'layout';
-@import 'typography';
-@import 'components';
-@import 'utility';
-@import 'theme';
+// @use 'variables';
+// @use 'mixins';
+// @use 'vendor/include-media';
+@use 'vendor/normalize';
+// @use 'vendor/boilerplate';
+@use 'layout';
+@use 'typography';
+@use 'components';
+@use 'utility';
+@use 'theme';

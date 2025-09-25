@@ -1,3 +1,6 @@
+@use 'variables' as var;
+@use 'mixins' as mxn;
+
 body,
 html {
 	// align-items: center;
@@ -5,10 +8,10 @@ html {
 	// background: yellow;
 	// color: $color--dark;
 	// display: flex;
-	// font-family: $font-family--primary;
-	@include font-family--primary;
+	font-family:  var.$font-family--primary;
+	// @include font-family--primary;
 	font-style: normal;
-	font-weight: $font-weight--normal;
+	font-weight:  var.$font-weight--normal;
 	// min-height: 100%;
 	// justify-content: center;
 	// width: 100%;
@@ -30,15 +33,15 @@ figcaption {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font-family--secondary;
-	font-weight: $font-weight--bold;
+	font-family:  var.$font-family--secondary;
+	font-weight:  var.$font-weight--bold;
 	letter-spacing: 5%;
 	text-transform: uppercase;
 }
 
 h1 {
-	border-bottom: 1px solid $color--dark;
-	border-top: 1px solid $color--dark;
+	border-bottom: 1px solid  var.$color--dark;
+	border-top: 1px solid  var.$color--dark;
 	font-size: 200%;
 	// font-weight: $font-weight--bold;
 	// letter-spacing: 5%;
@@ -80,22 +83,22 @@ p {
 small,
 .small {
 	font-size: 75%;
-	font-weight: $font-weight--normal;
+	font-weight:  var.$font-weight--normal;
 }
 
 footer {
-	font-family: $font-family--numbers;
+	font-family:  var.$font-family--numbers;
 }
 
 input#kapInput {
-	font-family: $font-family--numbers;
+	font-family:  var.$font-family--numbers;
 }
 
 [id^='error--'] {
 	border: 1px solid;
 	display: inline-block;
-	font-family: $font-family--secondary;
-	font-weight: $font-weight--normal;
+	font-family:  var.$font-family--secondary;
+	font-weight:  var.$font-weight--normal;
 	font-size: 1.75rem;
 	letter-spacing: 5%;
 	margin-bottom: 0.5rem;
@@ -109,7 +112,7 @@ input#kapInput {
 	> div {
 		
 		&::after {
-			font-family: $font-family--numbers;
+			font-family:  var.$font-family--numbers;
 			font-size: 4rem;
 		}
 	}
@@ -118,33 +121,33 @@ input#kapInput {
 }
 
 .arithmatic {
-		font-family: $font-family--numbers;
+		font-family:  var.$font-family--numbers;
 		font-size: 80%;
 		text-align: right;
 	}
 
 .numbers {
-	font-family: $font-family--numbers;
+	font-family:  var.$font-family--numbers;
 }
 
 
 
 
 // BREAKPOINTS
-@include media(sm) {}
+@include mxn.media(sm) {}
 
-@include media(md) {
+@include mxn.media(md) {
 	h1 {
 		font-size: 300%;
 	}
 }
 
-@include media(lg) {
+@include mxn.media(lg) {
 	h1 {
 		font-size: 325%;
 	}
 }
 
-@include media(xl) {}
+@include mxn.media(xl) {}
 
-@include media(xxl) {}
+@include mxn.media(xxl) {}

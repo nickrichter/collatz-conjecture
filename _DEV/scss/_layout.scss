@@ -1,3 +1,6 @@
+@use 'variables' as var;
+@use 'mixins' as mxn;
+
 // LAYOUT/STRUCTURE
 html,
 body {
@@ -7,7 +10,7 @@ body {
 html { scroll-behavior: smooth; }
 
 figure {
-	// background: $color--white;
+	// background: var.$color--white;
 	margin: 0 0 5rem;
 	padding: 1rem;
 }
@@ -20,7 +23,7 @@ section {
 .container {
 	// align-items: center;
 	// background: aqua;
-	// border: 1px solid $color--black;
+	// border: 1px solid variables.$color--black;
 	box-sizing: border-box;
 	// display: flex;
 	// flex-direction: column;
@@ -38,37 +41,37 @@ section {
 	// xl: 1200px,
 	// xxl: 1400px
 	
-	// @media screen and(min-width: map-get($breakpoints, "sm")) {
-	@include media(sm) {
+	// @media screen and(min-width: map-get(variables.$breakpoints, "sm")) {
+	@include mxn.media(sm) {
 		// background: teal;
 		// width: 95%;
 		// width: 95vw;
 	}
 	
-	// @media screen and(min-width: map-get($breakpoints, "md")) {
-	@include media(md) {
+	// @media screen and(min-width: map-get(variables.$breakpoints, "md")) {
+	@include mxn.media(md) {
 		// background: pink;
 		// width: 90%;
 		// width: 90vw;
 		// width: 750px;
 	}
 	
-	// @media screen and(min-width: map-get($breakpoints, "lg")) {
-	@include media(lg) {
+	// @media screen and(min-width: map-get(variables.$breakpoints, "lg")) {
+	@include mxn.media(lg) {
 		// background: yellow;
 		// width: 80%;
 		// width: 80vw;
 	}
 	
-	// @media screen and(min-width: map-get($breakpoints, "xl")) {
-	@include media(xl) {
+	// @media screen and(min-width: map-get(variables.$breakpoints, "xl")) {
+	@include mxn.media(xl) {
 		// background: orange;
 		// width: 75%;
 		// width: 75vw;
 	}
 	
-	// @media screen and(min-width: map-get($breakpoints, "xxl")) {
-	@include media(xxl) {
+	// @media screen and(min-width: map-get(variables.$breakpoints, "xxl")) {
+	@include mxn.media(xxl) {
 		// background: red;
 		// width: 60%;
 		// width: 50vw;
@@ -82,7 +85,7 @@ section {
 		// margin: 0;
 	}
 	
-	@include media(md) {
+	@include mxn.media(md) {
 		// color: magenta;
 	}
 }	
@@ -91,7 +94,7 @@ section {
 	counter-reset: section;
 	display: flex;
 	flex-wrap: wrap;
-	// font-family: $font-family--primary;
+	// font-family: variables.$font-family--primary;
 	
 	figure & {
 		//
@@ -139,8 +142,8 @@ section {
 }
 
 #transcript {
-	// background: darken($color--dark, 5%);
-	// border: 1px solid $color--black;
+	// background: darken(variables.$color--dark, 5%);
+	// border: 1px solid variables.$color--black;
 	// text-align: justify;
 }
 
@@ -153,9 +156,9 @@ section {
 
 
 // BREAKPOINTS
-@include media(sm) {}
+@include mxn.media(sm) {}
 	
-@include media(md) {
+@include mxn.media(md) {
 	.container {
 		// background: purple;
 		width: 90vw;
@@ -166,12 +169,12 @@ section {
 	}
 }
 
-@include media(lg) {
+@include mxn.media(lg) {
 	.container {
 		width: 75vw;
 	}
 }
 
-@include media(xl) {}
+@include mxn.media(xl) {}
 
-@include media(xxl) {}
+@include mxn.media(xxl) {}

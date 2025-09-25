@@ -1,22 +1,26 @@
+@use 'sass:color';
+@use 'sass:map';
+@use 'variables' as var;
+@use 'mixins' as mxn;
 // ELEMENTS
 body,
 html {
 	// align-items: center;
-	background: $color--light;
+	background: var.$color--light;
 	// background: yellow;
-	color: $color--dark;
+	color: var.$color--dark;
 	// display: flex;
-	// font-family: $font-family--primary;
+	// font-family: var.$font-family--primary;
 	// @include font-family--primary;
 	// font-style: normal;
-	// font-weight: $font-weight--normal;
+	// font-weight: var.$font-weight--normal;
 	// min-height: 100%;
 	// justify-content: center;
 	// width: 100%;
 }
 
 html {
-	// background-image: linear-gradient(rgba($color--dark, .1) 1px, transparent 1px), linear-gradient(90deg, rgba($color--dark, .1) 1px, transparent 1px);
+	// background-image: linear-gradient(rgba(var.$color--dark, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(var.$color--dark, .1) 1px, transparent 1px);
 	// background-position: center 0;
 	// background-size: 1rem 1rem;
 }
@@ -33,7 +37,7 @@ body {
 }
 
 a {
-	color: $color--accent-2;
+	color: var.$color--accent-2;
 	// font-size: 1.2rem;
 	// font-weight: 500;
 	// left: 1rem;
@@ -43,10 +47,10 @@ a {
 	// top: 1rem;
 	
 	&:hover {
-		// border-bottom: 2px solid $color--white;
-		// color: $color--white;
+		// border-bottom: 2px solid var.$color--white;
+		// color: var.$color--white;
 		// text-decoration: underline;
-		// text-shadow: 0 0 6px $color--black;
+		// text-shadow: 0 0 6px var.$color--black;
 	}
 }
 
@@ -55,25 +59,25 @@ em {
 }
 
 h1 {
-	color: $color--dark;
+	color: var.$color--dark;
 }
 
 h2 {
 	
 	#calculation-results & {
-		border-bottom: 1px solid $color--dark;
+		border-bottom: 1px solid var.$color--dark;
 	}
 }
 
 p {
-	// color: $color--white;
+	// color: var.$color--white;
 	
 	// font-size: 2.0rem;
 	// line-height: 1.2;
 	// margin: 0;
 	// padding: 0;
 	// text-align: justify;
-	// text-shadow: 0px 0px 4px $color--black;
+	// text-shadow: 0px 0px 4px var.$color--black;
 	
 	&.callout {
 		// font-size: 120%;
@@ -89,57 +93,57 @@ p {
 		// padding: 0;
 	}
 	
-	@media screen and (min-width: map-get($breakpoints, "sm")) {
+	@media screen and (min-width: map.get(var.$breakpoints, "sm")) {
 		// width: 95%;
 		// width: 95vw;
 	}
 	
-	@media screen and (min-width: map-get($breakpoints, "md")) {
+	@media screen and (min-width: map.get(var.$breakpoints, "md")) {
 		// width: 90%;
 		// width: 90vw;
 	}
 	
-	@media screen and (min-width: map-get($breakpoints, "lg")) {
+	@media screen and (min-width: map.get(var.$breakpoints, "lg")) {
 		// width: 80%;
 		// width: 80vw;
 	}
 	
-	@media screen and (min-width: map-get($breakpoints, "xl")) {
+	@media screen and (min-width: map.get(var.$breakpoints, "xl")) {
 		// width: 75%;
 		// width: 75vw;
 	}
 	
-	@media screen and (min-width: map-get($breakpoints, "xxl")) {
+	@media screen and (min-width: map.get(var.$breakpoints, "xxl")) {
 		// width: 60%;
 		// width: 60vw;
 	}
 }
 
 strong {
-	font-weight: $font-weight--bold;
+	font-weight: var.$font-weight--bold;
 }
 
 [id^="error--"] {
-	border-color: $color--accent-2;
-	color: $color--dark;
+	border-color: var.$color--accent-2;
+	color: var.$color--dark;
 }
 
 figure {
-	background: color.scale($color--light, $lightness: 75%);
-	background-image: linear-gradient(rgba($color--dark, .05) 1px, transparent 1px), linear-gradient(90deg, rgba($color--dark, .05) 1px, transparent 1px);
+	background: color.scale(var.$color--light, $lightness: 75%);
+	background-image: linear-gradient(rgba(var.$color--dark, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(var.$color--dark, .05) 1px, transparent 1px);
 	background-position: top left;
 	background-size: 1rem 1rem;
-	box-shadow: rgba($color--dark, 0.2) 0px 1px 2px 0px, rgba($color--dark, 0.05) 0px 1px 3px 1px;
+	box-shadow: rgba(var.$color--dark, 0.2) 0px 1px 2px 0px, rgba(var.$color--dark, 0.05) 0px 1px 3px 1px;
 }
 
 [id^='calculation-steps--'] {
-	background: color.scale($color--light, $lightness: 75%);
-	background-image: linear-gradient(rgba($color--dark, .05) 1px, transparent 1px), linear-gradient(90deg, rgba($color--dark, .05) 1px, transparent 1px);
+	background: color.scale(var.$color--light, $lightness: 75%);
+	background-image: linear-gradient(rgba(var.$color--dark, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(var.$color--dark, .05) 1px, transparent 1px);
 	background-position: top left;
 	background-size: 1rem 1rem;
 	border-radius: 2px;
-	box-shadow: rgba($color--dark, 0.2) 0px 1px 2px 0px, rgba($color--dark, 0.05) 0px 1px 3px 1px;
-	// font-family: $font-family--primary;
+	box-shadow: rgba(var.$color--dark, 0.2) 0px 1px 2px 0px, rgba(var.$color--dark, 0.05) 0px 1px 3px 1px;
+	// font-family: var.$font-family--primary;
 	
 	figure & {
 		background: none;
@@ -150,23 +154,23 @@ figure {
 	> div {
 		
 		&::after {
-			color: $color--accent-2;
+			color: var.$color--accent-2;
 		}
 	}
 	
 	.arithmatic {
-		color: $color--accent-2;
+		color: var.$color--accent-2;
 	}
 }
 
 .arithmatic {
 	
 	hr {
-		background: $color--accent-2;
+		background: var.$color--accent-2;
 	}
 	
 	.solution {
-		border-color: $color--accent-2;
+		border-color: var.$color--accent-2;
 	}
 }
 
@@ -200,13 +204,13 @@ footer {
 
 // UTILITY CLASSES
 .weight--medium {
-	// font-weight: $font-weight--medium;
+	// font-weight: var.$font-weight--medium;
 }
 
 .font-secondary {
-	// font-family: $font-family--secondary;
-	// font-style: $font-style--secondary;
-	// font-weight: $font-weight--secondary;
+	// font-family: var.$font-family--secondary;
+	// font-style: var.$font-style--secondary;
+	// font-weight: var.$font-weight--secondary;
 	// white-space: nowrap;
 }
 
@@ -214,12 +218,12 @@ footer {
 
 
 // BREAKPOINTS
-@include media(sm) {}
+@include mxn.media(sm) {}
 	
-@include media(md) {}
+@include mxn.media(md) {}
 
-@include media(lg) {}
+@include mxn.media(lg) {}
 
-@include media(xl) {}
+@include mxn.media(xl) {}
 
-@include media(xxl) {}
+@include mxn.media(xxl) {}

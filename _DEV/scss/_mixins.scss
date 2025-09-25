@@ -1,5 +1,7 @@
+@use 'variables';
+
 @mixin media($breakpoint) {
-	@each $breakpoints, $size in $breakpoints {
+	@each $breakpoints, $size in variables.$breakpoints {
 		@if $breakpoint==$breakpoints {
 			@media screen and (min-width: $size) {
 				@content;
