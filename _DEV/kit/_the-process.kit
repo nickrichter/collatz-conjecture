@@ -1,0 +1,60 @@
+<section id="section--the-process">
+	<h2>The Process</h2>
+	
+	<p>There are several steps within each iteration of the algorithm. It's actually quite simple.</p>
+	<ol>
+		<li>
+			Receive some input. The parameters were touched on previously, but to reiterate: The input must be 4-digits in length. The input must contain at least two unique numbers.
+		</li>
+		<li>
+			Rearrange the input, sorting the numbers in both ascending and descending order. These are your "maximum" and "minimum" values available from the provided input.
+		</li>
+		<li>
+			Get the difference of the max and min values we established in the previous step.
+		</li>
+		<li>
+			Run that new value (the calculated difference) through the process.
+		</li>
+		<li>
+			Repeat until the result is 6174. At that point the result will <em>always</em> be 6174.
+		</li>
+	</ol>
+	
+	<figure>
+		<figcaption>example 1</figcaption>
+	
+		<div id="calculation-steps--example-1">
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">1234</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">1,2,3,4</span></p>
+				<div class="arithmatic">4321<br>- 1234
+					<hr>3087
+				</div>
+			</div>
+			
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">3087</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">3,0,8,7</span></p>
+				<div class="arithmatic">8730<br>- 0378
+					<hr>8352
+				</div>
+			</div>
+			
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">8352</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">8,3,5,2</span></p>
+				<div class="arithmatic">8532<br>- 2358
+					<hr><span class="solution">6174</span>
+				</div>
+			</div>
+			
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">6174</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">6,1,7,4</span></p>
+				<div class="arithmatic">7641<br>- 1467
+					<hr><span class="solution">6174</span>
+				</div>
+			</div>
+		</div>
+	</figure>
+</section><!-- /#section--the-process -->

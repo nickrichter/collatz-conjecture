@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- $PgTitle = Kaprekar's Constant -->
+<!-- @import "document__head.kit" -->
+
+<body>
+	<header>
+		<div class="container">
+			<h1>Kaprekar's Constant</h1>
+		</div><!-- /.container -->
+	</header>
+	
+	<div class="container">
+		<section id="credits">
+			<!-- @import "intro-copy.kit" -->
+			<!-- @import "the-process.kit" -->
+			<!-- @import "observations.kit" -->
+		</section><!-- /#credits -->
+		
+		<section id="input-form">
+			<h2>Try it out.</h2>
+			
+			<span id="error--unique-digits" class="hide">Not enough unique digits</span><!-- /#error--unique-digits -->
+			<span id="error--kaprekars-constant" class="hide">Enter a number other than 6174</span><!-- /#error--kaprekars-constant -->
+			<input type="text" id="kapInput" name="kapInput" maxlength="4" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+			<button id="button--start-calculation">Go</button>
+		</section><!-- /#input-form -->
+		
+		<section id="calculation-results" class="hide">
+			<h2>Results</h2>
+			
+			<div id="calculation-steps--user-input">
+				<div>
+					<p><strong>Input:</strong></p>
+					<p><strong>Unique digits:</strong></p>
+					<div class="arithmatic">
+						<hr>
+					</div><!-- /#arithmatic -->
+				</div>
+			</div><!-- /#calculation-steps -->
+		</section><!-- /#calculation-results -->
+		
+		<footer>
+			<div class="link">
+				<img src="a/img/github-mark.svg">
+				<p><small><a href="https://github.com/nickrichter/kaprekar-constant" target="_blank">View on GitHub</a></small></p>
+			</div><!-- /.link -->
+			
+		</footer>
+	</div><!-- /.container -->
+
+	<!-- @import "document__scripts.kit" -->
+</body>
+</html>

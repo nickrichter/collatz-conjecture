@@ -1,0 +1,49 @@
+// $color--light: #f7f4ea;
+// $color--light: #f9f7ef;
+$color--light: #faf9f3;
+// $color--dark: #1A2F44;
+// $color--dark: #14140F;
+$color--dark: #001c0e;
+$color--primary: #BA802A;
+$color--secondary: #B8AAAD;
+$color--accent-1: #912F30;
+// $color--accent-2: #EF6024;
+$color--accent-2: #de5617;
+
+$color--red: #b81004;
+$color--gray: #646464;
+$color--black: #000;
+$color--white: #fff;
+
+// Archer - book, medium, bold
+// $font-family--primary: "Archer A", "Archer B", "Times", serif;
+// $font-family--primary: "Chronicle Comp A", "Chronicle Comp B", serif;
+$font-family--primary: "Surveyor SSm A", "Surveyor SSm B", serif;
+// $font-family--secondary: "Verlag Comp A", "Verlag Comp B", sans-serif;
+$font-family--secondary: "Tungsten Narrow A", "Tungsten Narrow B", sans-serif;
+$font-family--numbers: "Numbers Claimcheck A", "Numbers Claimcheck B", monospace;
+// $font-family--numbers: "Numbers Revenue A", "Numbers Revenue B", monospace;
+$font-family--mono: monospace;
+$font-weight--normal: 400;
+// $font-weight--medium: 600;
+$font-weight--bold: 700;
+
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+
+
+
+@mixin font-family--primary {
+	font-family: $font-family--primary;
+}
+
+@mixin font-family--secondary {
+	font-family: $font-family--secondary;
+}

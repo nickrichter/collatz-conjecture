@@ -1,0 +1,47 @@
+ol {
+	counter-reset: my-awesome-counter;
+	list-style: none;
+	margin: 3rem 0;
+	padding: 0;
+}
+
+ol li {
+	counter-increment: my-awesome-counter;
+	margin-bottom: 1.75rem;
+}
+
+ol li::before {
+	color: $color--accent-2;
+	content: counter(my-awesome-counter) ". ";
+	font-family: $font-family--numbers;
+	font-size: 125%;
+	// font-weight: bold;
+}
+
+input {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+}
+
+#button--start-calculation {
+	background: $color--accent-2;
+	border: none;
+	color: $color--light;
+	display: block;
+	font-family: $font-family--secondary;
+	font-size: 150%;
+	font-weight: $font-weight--normal;
+	letter-spacing: 5%;
+	line-height: 1;
+	margin-top: 1rem;
+	padding: 0.5rem 5rem;
+	text-transform: uppercase;
+	
+	&:hover {
+		// background: darken($color--accent-2, 5%);
+		// color: darken($color--dark, 5%);
+		cursor: pointer;
+		// filter: brightness(0.75) saturate(150%);
+	}
+}

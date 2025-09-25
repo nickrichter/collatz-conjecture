@@ -1,0 +1,225 @@
+// ELEMENTS
+body,
+html {
+	// align-items: center;
+	background: $color--light;
+	// background: yellow;
+	color: $color--dark;
+	// display: flex;
+	// font-family: $font-family--primary;
+	// @include font-family--primary;
+	// font-style: normal;
+	// font-weight: $font-weight--normal;
+	// min-height: 100%;
+	// justify-content: center;
+	// width: 100%;
+}
+
+html {
+	// background-image: linear-gradient(rgba($color--dark, .1) 1px, transparent 1px), linear-gradient(90deg, rgba($color--dark, .1) 1px, transparent 1px);
+	// background-position: center 0;
+	// background-size: 1rem 1rem;
+}
+
+body {
+	// align-items: center;
+	background: transparent;
+	// display: flex;
+	// flex-direction: column;
+	// font-size: 2.0rem;
+	// justify-content: center;
+	// padding: 0 2rem;
+	// padding: 0;
+}
+
+a {
+	color: $color--accent-2;
+	// font-size: 1.2rem;
+	// font-weight: 500;
+	// left: 1rem;
+	// line-height: 1;
+	// position: fixed;
+	text-decoration: underline;
+	// top: 1rem;
+	
+	&:hover {
+		// border-bottom: 2px solid $color--white;
+		// color: $color--white;
+		// text-decoration: underline;
+		// text-shadow: 0 0 6px $color--black;
+	}
+}
+
+em {
+	font-style: italic;
+}
+
+h1 {
+	color: $color--dark;
+}
+
+h2 {
+	
+	#calculation-results & {
+		border-bottom: 1px solid $color--dark;
+	}
+}
+
+p {
+	// color: $color--white;
+	
+	// font-size: 2.0rem;
+	// line-height: 1.2;
+	// margin: 0;
+	// padding: 0;
+	// text-align: justify;
+	// text-shadow: 0px 0px 4px $color--black;
+	
+	&.callout {
+		// font-size: 120%;
+		
+		&:last-of-type {
+			// margin-bottom: 2rem;
+		}
+	}
+	
+	#transcript & {
+		// line-height: 1;
+		// margin: 0;
+		// padding: 0;
+	}
+	
+	@media screen and (min-width: map-get($breakpoints, "sm")) {
+		// width: 95%;
+		// width: 95vw;
+	}
+	
+	@media screen and (min-width: map-get($breakpoints, "md")) {
+		// width: 90%;
+		// width: 90vw;
+	}
+	
+	@media screen and (min-width: map-get($breakpoints, "lg")) {
+		// width: 80%;
+		// width: 80vw;
+	}
+	
+	@media screen and (min-width: map-get($breakpoints, "xl")) {
+		// width: 75%;
+		// width: 75vw;
+	}
+	
+	@media screen and (min-width: map-get($breakpoints, "xxl")) {
+		// width: 60%;
+		// width: 60vw;
+	}
+}
+
+strong {
+	font-weight: $font-weight--bold;
+}
+
+[id^="error--"] {
+	border-color: $color--accent-2;
+	color: $color--dark;
+}
+
+figure {
+	background: color.scale($color--light, $lightness: 75%);
+	background-image: linear-gradient(rgba($color--dark, .05) 1px, transparent 1px), linear-gradient(90deg, rgba($color--dark, .05) 1px, transparent 1px);
+	background-position: top left;
+	background-size: 1rem 1rem;
+	box-shadow: rgba($color--dark, 0.2) 0px 1px 2px 0px, rgba($color--dark, 0.05) 0px 1px 3px 1px;
+}
+
+[id^='calculation-steps--'] {
+	background: color.scale($color--light, $lightness: 75%);
+	background-image: linear-gradient(rgba($color--dark, .05) 1px, transparent 1px), linear-gradient(90deg, rgba($color--dark, .05) 1px, transparent 1px);
+	background-position: top left;
+	background-size: 1rem 1rem;
+	border-radius: 2px;
+	box-shadow: rgba($color--dark, 0.2) 0px 1px 2px 0px, rgba($color--dark, 0.05) 0px 1px 3px 1px;
+	// font-family: $font-family--primary;
+	
+	figure & {
+		background: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	
+	> div {
+		
+		&::after {
+			color: $color--accent-2;
+		}
+	}
+	
+	.arithmatic {
+		color: $color--accent-2;
+	}
+}
+
+.arithmatic {
+	
+	hr {
+		background: $color--accent-2;
+	}
+	
+	.solution {
+		border-color: $color--accent-2;
+	}
+}
+
+footer {
+	padding: 1rem 0;
+	
+	.link {
+		display: flex;
+		align-items: center;
+		
+		img {
+			display: inline-block;
+			height: 1rem;
+			margin: 0 0.75rem 0 0;
+			// width: 1rem;
+		}
+		
+		p {
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+// UTILITY CLASSES
+.weight--medium {
+	// font-weight: $font-weight--medium;
+}
+
+.font-secondary {
+	// font-family: $font-family--secondary;
+	// font-style: $font-style--secondary;
+	// font-weight: $font-weight--secondary;
+	// white-space: nowrap;
+}
+
+
+
+
+// BREAKPOINTS
+@include media(sm) {}
+	
+@include media(md) {}
+
+@include media(lg) {}
+
+@include media(xl) {}
+
+@include media(xxl) {}

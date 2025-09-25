@@ -1,0 +1,55 @@
+<section id="section--observations">
+	<h2>Observations</h2>
+	
+	<p>I did notice a quirk about this algorithm that might be worth pointing out. If the input has only two unique numbers, those two numbers are sequential, <em>and</em> there are three instances of one and one of the other, it sort of breaks the process.</p>
+	
+	<p>For example, if the input is 4544 the resulting calculation is <span class="numbers">5444 - 4445 = 999</span>. The result in cases such as these will <em>always</em> be 999. This is also true if the large and small numbers are swapped (using 5455 as the input will yield the same result). You can see why we are in a bit of a pickle at this point. The algorithm depends on an input with 4 digits.</p>
+	
+	<p>To get around this we have to cheat a little bit and add a leading zero, passing along 0999 as our input. By doing this the resulting calculation will be <span class="numbers">9990 - 0999 = 8991</span>, which we can then use to continue the routine. This also means that the steps to arrive at 6174 for such scenarios will always be the same.</p>
+	
+	<figure>
+		<figcaption>example 2</figcaption>
+	
+		<div id="calculation-steps--example-2">
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">4544</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">4,5</span></p>
+				<div class="arithmatic">5444<br>- 4445
+					<hr>999
+				</div>
+			</div>
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">0999</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">0,9</span></p>
+				<div class="arithmatic">9990<br>- 0999
+					<hr>8991
+				</div>
+			</div>
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">8991</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">8,9,1</span></p>
+				<div class="arithmatic">9981<br>- 1899
+					<hr>8082
+				</div>
+			</div>
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">8082</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">8,0,2</span></p>
+				<div class="arithmatic">8820<br>- 0288
+					<hr>8532
+				</div>
+			</div>
+			<div>
+				<p><strong>Input:</strong> <span class="numbers">8532</span></p>
+				<p><strong>Unique digits:</strong> <span class="numbers">8,5,3,2</span></p>
+				<div class="arithmatic">8532<br>- 2358
+					<hr><span class="solution">6174</span>
+				</div>
+			</div>
+		</div>
+	</figure>
+	
+	<p>There are plenty of funny quirks like that.</p>
+	
+	<p>Try inputting different types of patterns and sequences, then using variations of that pattern/sequece. For example: 1313, 2424, and 3535. Or 1135, 3357, and 5579. As I've been building and iterating on this, I have found myself strangely fascinated by the whole thing and will just spend time entering random numbers to see the steps play out. But I am totally willing to accept that I am the weirdo here.</p>
+</section><!-- /#section--observations -->
