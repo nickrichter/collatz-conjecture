@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="">
 
-<!-- $PgTitle = Kaprekar's Constant -->
+<!-- $PgTitle = Collatz Conjecture -->
 <!-- @import "document__head.kit" -->
 
 <body>
 	<header>
 		<div class="container">
-			<h1>Kaprekar's Constant</h1>
+			<h1>The Collatz Conjecture</h1>
 		</div><!-- /.container -->
 	</header>
 	
@@ -21,9 +21,10 @@
 		<section id="input-form">
 			<h2>Try it out.</h2>
 			
-			<span id="error--unique-digits" class="hide">Not enough unique digits</span><!-- /#error--unique-digits -->
-			<span id="error--kaprekars-constant" class="hide">Enter a number other than 6174</span><!-- /#error--kaprekars-constant -->
-			<input type="text" id="kapInput" name="kapInput" maxlength="4" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+			<p class="small"><small><span class="highlight">Please note:</span> For the sake of reducing compute time and load, I have set this up to limit the input to a maximum of ten digits. If you want to try this out for yourself without such limits, <a href="https://github.com/nickrichter/collatz-conjecture" target="ccout">clone this repository</a>, remove or increase the limits, and upload it to your own server.</small></p>
+			
+			<span id="error--digits-maximum" class="hide">Please enter a number with fewer than ten digits.</span><!-- /#error--unique-digits -->
+			<input type="text" id="userInput" name="userInput" maxlength="10" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 			<button id="button--start-calculation">Go</button>
 		</section><!-- /#input-form -->
 		
@@ -44,9 +45,16 @@
 		<footer>
 			<div class="link">
 				<img src="a/img/github-mark.svg">
-				<p><small><a href="https://github.com/nickrichter/kaprekar-constant" target="_blank">View on GitHub</a></small></p>
+				<p><small><a href="https://github.com/nickrichter/collatz-conjecture" target="ccout">View on GitHub</a></small></p>
 			</div><!-- /.link -->
 			
+			<div class="recommendations">
+				<p><strong>You might also like</strong></p>
+				
+				<ul>
+					<li><a href="https://nickrichter.github.io/kaprekar-constant">Kaprekar's Constant</a></li>
+				</ul>
+			</div><!-- /.recommendations -->
 		</footer>
 	</div><!-- /.container -->
 

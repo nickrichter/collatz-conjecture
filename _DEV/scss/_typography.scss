@@ -84,13 +84,18 @@ small,
 .small {
 	font-size: 75%;
 	font-weight:  var.$font-weight--normal;
+	line-height: 1;
+	
+	p & {
+		line-height: 1.1;
+	}
 }
 
 footer {
 	font-family:  var.$font-family--numbers;
 }
 
-input#kapInput {
+input#userInput {
 	font-family:  var.$font-family--numbers;
 }
 
@@ -123,11 +128,22 @@ input#kapInput {
 .arithmatic {
 		font-family:  var.$font-family--numbers;
 		font-size: 80%;
-		text-align: right;
+		text-align: left;
 	}
 
 .numbers {
 	font-family:  var.$font-family--numbers;
+}
+
+.recommendations {
+	
+	ul {
+		
+		li {
+			font-size: 0.9rem;
+			line-height: 1;
+		}
+	}
 }
 
 

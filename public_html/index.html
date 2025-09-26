@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Collatz Conjecture</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7964554/7811632/css/fonts.css">
+  <link rel="stylesheet" href="a/css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<h1>The Collatz Conjecture</h1>
+		</div><!-- /.container -->
+	</header>
+	
+	<div class="container">
+		<section id="credits">
+			<section id="section--intro-copy">
+				<h2>What is this?</h2>
+				
+				<p>The <a href="https://en.m.wikipedia.org/wiki/Collatz_conjecture" target="ccout">Collatz Conjecture</a> is an unsolved problem in mathematics which asks if repeating two simple arithmetic operations will eventually transform any positive integer to 1.</p>
+				
+				<p>The reason this is an unsolved problem is because no proof has yet been produced for whether or not this works for <em>any</em> positive integer.</p>
+			</section><!-- /#section--intro-copy -->
+			<section id="section--the-process">
+							<h2>The Process</h2>
+							
+							<ol>
+								<li>
+									Receive some input. This can be any positive integer.
+								</li>
+								<li>
+									<ol>
+										<li>If the input is odd multiply it by 3 then add 1.</li>
+										<li>If the input is even divide it by 2.</li>
+									</ol>
+								</li>
+								<li>
+									Repeat.
+								</li>
+							</ol>
+							
+							<figure>
+								<figcaption>example 1</figcaption>
+							
+								<div id="calculation-steps--example-1">
+									<div>
+										<p><strong>Input:</strong> <span class="numbers">10</span></p>
+										<div class="arithmatic">10 &divide; 2 &equals; 5</div>
+										<div class="arithmatic">(5 &times; 3) &plus; 1 &equals; 16</div>
+										<div class="arithmatic">16 &divide; 2 &equals; 8</div>
+										<div class="arithmatic">8 &divide; 2 &equals; 4</div>
+										<div class="arithmatic">4 &divide; 2 &equals; 2</div>
+										<div class="arithmatic">2 &divide; 2 &equals; <span class="solution">1</span></div>
+										<div class="arithmatic">(1 &times; 3) &plus; 1 &equals; 4</div>
+										<div class="arithmatic">4 &divide; 2 &equals; 2</div>
+										<div class="arithmatic">2 &divide; 2 &equals; <span class="solution">1</span></div>
+									</div>
+								</div>
+							</figure>
+							
+							<p>As you can see, once the result hits 4, 2, or 1 the steps will always be the same and repeat forever.</p>
+						</section><!-- /#section--the-process -->
+			<section id="section--observations">
+										<h2>Observations</h2>
+										
+										<p>Since the process is so simple I haven't noticed too many things that yield unusual results. Probably the closest thing to "quirky" that I've observed is if the output is some power of 2 you will get that many "divide by 2" operations until you reach 1. That's fairly obvious as the opposite of "divide by 2" is "multiply by 2" and it's not too drastic a leap to get to 2<sup>y</sup>. In the following example, let's input 2&#8312; (256).</p>
+										
+										<figure>
+											<figcaption>example 2</figcaption>
+										
+											<div id="calculation-steps--example-2">
+												<div>
+													<p><strong>Input:</strong> <span class="numbers">256</span></p>
+													<div class="arithmatic">256 &divide; 2 &equals; 128</div>
+													<div class="arithmatic">128 &divide; 2 &equals; 64</div>
+													<div class="arithmatic">64 &divide; 2 &equals; 32</div>
+													<div class="arithmatic">32 &divide; 2 &equals; 16</div>
+													<div class="arithmatic">16 &divide; 2 &equals; 8</div>
+													<div class="arithmatic">8 &divide; 2 &equals; 4</div>
+													<div class="arithmatic">4 &divide; 2 &equals; 2</div>
+													<div class="arithmatic">2 &divide; 2 &equals; <span class="solution">1</span></div>
+												</div>
+											</div>
+										</figure>
+										
+										<p>I am not a math professional, or even an amateur for that matter, so I have no idea how to go about finding anything truly interesting or odd. Maybe you'll have more luck in that regard.</p>
+									</section><!-- /#section--observations -->
+		</section><!-- /#credits -->
+		
+		<section id="input-form">
+			<h2>Try it out.</h2>
+			
+			<p class="small"><small><span class="highlight">Please note:</span> For the sake of reducing compute time and load, I have set this up to limit the input to a maximum of ten digits. If you want to try this out for yourself without such limits, <a href="https://github.com/nickrichter/collatz-conjecture" target="ccout">clone this repository</a>, remove or increase the limits, and upload it to your own server.</small></p>
+			
+			<span id="error--digits-maximum" class="hide">Please enter a number with fewer than ten digits.</span><!-- /#error--unique-digits -->
+			<input type="text" id="userInput" name="userInput" maxlength="10" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+			<button id="button--start-calculation">Go</button>
+		</section><!-- /#input-form -->
+		
+		<section id="calculation-results" class="hide">
+			<h2>Results</h2>
+			
+			<div id="calculation-steps--user-input">
+				<div>
+					<p><strong>Input:</strong></p>
+					<p><strong>Unique digits:</strong></p>
+					<div class="arithmatic">
+						<hr>
+					</div><!-- /#arithmatic -->
+				</div>
+			</div><!-- /#calculation-steps -->
+		</section><!-- /#calculation-results -->
+		
+		<footer>
+			<div class="link">
+				<img src="a/img/github-mark.svg">
+				<p><small><a href="https://github.com/nickrichter/collatz-conjecture" target="ccout">View on GitHub</a></small></p>
+			</div><!-- /.link -->
+			
+			<div class="recommendations">
+				<p><strong>You might also like</strong></p>
+				
+				<ul>
+					<li><a href="https://nickrichter.github.io/kaprekar-constant">Kaprekar's Constant</a></li>
+				</ul>
+			</div><!-- /.recommendations -->
+		</footer>
+	</div><!-- /.container -->
+
+	<script src="a/js/main-min.js"></script>
+</body>
+</html>

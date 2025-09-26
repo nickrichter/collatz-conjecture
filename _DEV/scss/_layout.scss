@@ -92,8 +92,8 @@ section {
 
 [id^='calculation-steps--'] {
 	counter-reset: section;
-	display: flex;
-	flex-wrap: wrap;
+	// display: flex;
+	// flex-wrap: wrap;
 	// font-family: variables.$font-family--primary;
 	
 	figure & {
@@ -102,28 +102,40 @@ section {
 	
 	> div {
 		// background: aqua;
+		display: grid;
 		padding: 1.5rem;
 		position: relative;
 		
 		&::after {
-			bottom: 0.5em;
-			counter-increment: section;
-			content: "" counter(section) "";
-			opacity: (0.2);
-			position: absolute;
-			right: 0.5em;
+			// bottom: 0.5em;
+			// counter-increment: section;
+			// content: "" counter(section) "";
+			// opacity: (0.2);
+			// position: absolute;
+			// right: 0.5em;
 			// transform: rotate(-15deg) scale(300%);
+		}
+		
+		> p,
+		> div {
+			// background: yellow;
+			grid-column-start: 1;
+			grid-column-end: auto;
 		}
 	}
 	
 	p {
 		margin: 0 0 0.5rem;
 	}
+	
+	.arithmatic:nth-child(even) {
+		background-color: rgba(119, 222, 23, 0.2);
+	}
 }
 
 .arithmatic {
 	display: inline-block;
-	text-align: right;
+	text-align: left;
 	
 	hr {
 		border: none;
@@ -145,6 +157,28 @@ section {
 	// background: darken(variables.$color--dark, 5%);
 	// border: 1px solid variables.$color--black;
 	// text-align: justify;
+}
+
+.recommendations {
+	margin-top: 1rem;
+	
+	p {
+		margin-bottom: 0.5rem;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			margin-bottom: 0.5rem;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 
