@@ -10,7 +10,6 @@ body {
 html { scroll-behavior: smooth; }
 
 figure {
-	// background: var.$color--white;
 	margin: 0 0 5rem;
 	padding: 1rem;
 }
@@ -21,104 +20,44 @@ section {
 }
 
 .container {
-	// align-items: center;
-	// background: aqua;
-	// border: 1px solid variables.$color--black;
 	box-sizing: border-box;
-	// display: flex;
-	// flex-direction: column;
-	// height: 100%;
-	// justify-content: center;
 	margin: 0 auto;
 	padding: 0 2vw;
-	// width: 100%;
-	// width: 96vw;
 	width: 100vw;
 	
-	// sm: 576px,
-	// md: 768px,
-	// lg: 992px,
-	// xl: 1200px,
-	// xxl: 1400px
-	
-	// @media screen and(min-width: map-get(variables.$breakpoints, "sm")) {
-	@include mxn.media(sm) {
-		// background: teal;
-		// width: 95%;
-		// width: 95vw;
-	}
-	
-	// @media screen and(min-width: map-get(variables.$breakpoints, "md")) {
-	@include mxn.media(md) {
-		// background: pink;
-		// width: 90%;
-		// width: 90vw;
-		// width: 750px;
-	}
-	
-	// @media screen and(min-width: map-get(variables.$breakpoints, "lg")) {
-	@include mxn.media(lg) {
-		// background: yellow;
-		// width: 80%;
-		// width: 80vw;
-	}
-	
-	// @media screen and(min-width: map-get(variables.$breakpoints, "xl")) {
-	@include mxn.media(xl) {
-		// background: orange;
-		// width: 75%;
-		// width: 75vw;
-	}
-	
-	// @media screen and(min-width: map-get(variables.$breakpoints, "xxl")) {
-	@include mxn.media(xxl) {
-		// background: red;
-		// width: 60%;
-		// width: 50vw;
-	}
+	@include mxn.media(sm) {}
+
+	@include mxn.media(md) {}
+
+	@include mxn.media(lg) {}
+
+	@include mxn.media(xl) {}
+
+	@include mxn.media(xxl) {}
 }
 
 #credits {
 	margin-bottom: 2rem;
 	
-	p {
-		// margin: 0;
-	}
+	p {}
 	
-	@include mxn.media(md) {
-		// color: magenta;
-	}
+	@include mxn.media(md) {}
 }	
 
 [id^='calculation-steps--'] {
 	counter-reset: section;
-	// display: flex;
-	// flex-wrap: wrap;
-	// font-family: variables.$font-family--primary;
 	
-	figure & {
-		//
-	}
+	figure & {}
 	
 	> div {
-		// background: aqua;
 		display: grid;
 		padding: 1.5rem;
 		position: relative;
 		
-		&::after {
-			// bottom: 0.5em;
-			// counter-increment: section;
-			// content: "" counter(section) "";
-			// opacity: (0.2);
-			// position: absolute;
-			// right: 0.5em;
-			// transform: rotate(-15deg) scale(300%);
-		}
+		&::after {}
 		
 		> p,
 		> div {
-			// background: yellow;
 			grid-column-start: 1;
 			grid-column-end: auto;
 		}
@@ -153,11 +92,7 @@ section {
 	}
 }
 
-#transcript {
-	// background: darken(variables.$color--dark, 5%);
-	// border: 1px solid variables.$color--black;
-	// text-align: justify;
-}
+#transcript {}
 
 .recommendations {
 	margin-top: 1rem;
@@ -193,14 +128,12 @@ section {
 @include mxn.media(sm) {}
 	
 @include mxn.media(md) {
+	
 	.container {
-		// background: purple;
 		width: 90vw;
 	}
 	
-	#credits {
-		// background: lime;
-	}
+	#credits {}
 }
 
 @include mxn.media(lg) {
