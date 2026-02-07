@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight:  var.$font-weight--bold;
 	letter-spacing: 5%;
 	text-transform: uppercase;
+	text-wrap: pretty;
 }
 
 h1 {
@@ -51,6 +52,7 @@ li {
 p {
 	margin: 0 0 2rem;
 	padding: 0;
+	text-wrap: pretty;
 	
 	&.callout {
 		font-size: 120%;
@@ -109,6 +111,7 @@ input#userInput {
 		font-family:  var.$font-family--numbers;
 		font-size: 80%;
 		text-align: left;
+		text-wrap: pretty;
 	}
 
 .numbers {
