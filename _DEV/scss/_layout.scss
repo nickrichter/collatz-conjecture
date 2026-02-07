@@ -45,7 +45,7 @@ section {
 }	
 
 [id^='calculation-steps--'] {
-	counter-reset: section;
+	counter-reset: steps-counter;
 	
 	figure & {}
 	
@@ -67,13 +67,25 @@ section {
 		margin: 0 0 0.5rem;
 	}
 	
+	.arithmatic {
+		counter-increment: steps-counter;
+	}
+	
 	.arithmatic:nth-child(even) {
 		background-color: rgba(119, 222, 23, 0.2);
+	}
+	
+	.arithmatic::before {
+		color: var.$color--black;
+		content: counter(steps-counter) '. ';
+		font-size: 50%;
+		// padding-left: 0.5em;
 	}
 }
 
 .arithmatic {
 	display: inline-block;
+	padding: 0.1rem 0.5rem;
 	text-align: left;
 	
 	hr {
