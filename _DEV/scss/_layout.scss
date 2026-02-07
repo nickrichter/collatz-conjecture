@@ -76,17 +76,16 @@ section {
 	}
 	
 	.arithmatic::before {
-		color: var.$color--gray;
-		content: counter(steps-counter) '.';
-		font-size: 50%;
-		margin-right: 0.5em;
+		padding-top: 0.85em;
 	}
 }
 
 .arithmatic {
-	display: inline-block;
-	padding: 0.1em 1em;
-	text-indent: -0.75em;
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: 2ch 1fr;
+	grid-column: 1 / 3;
+	padding: 0.1em 0.5em;
 	
 	hr {
 		border: none;

@@ -33,17 +33,17 @@ function crunchNumber(calculatedValue) {
 	
 	while(calculatedValue != conjectureEndpoint) {
 		if(isOdd(calculatedValue)) {
-			calculationResultsOutput += '<div class="arithmatic">(' + numberWithCommas(calculatedValue) + ' &times; 3) &plus; 1 &equals; ';
+			calculationResultsOutput += '<div class="arithmatic"><span>(' + numberWithCommas(calculatedValue) + ' &times; 3) &plus; 1 &equals; ';
 			calculatedValue = (calculatedValue * 3) + 1;
 			calculationResultsOutput += numberWithCommas(calculatedValue) + '</div>';
 		}else{
-			calculationResultsOutput += '<div class="arithmatic">' + numberWithCommas(calculatedValue) + ' &divide; 2 &equals; ';
+			calculationResultsOutput += '<div class="arithmatic"><span>' + numberWithCommas(calculatedValue) + ' &divide; 2 &equals; ';
 			calculatedValue = calculatedValue / 2;
 			
 			if(calculatedValue != conjectureEndpoint) {
-				calculationResultsOutput += numberWithCommas(calculatedValue) + '</div>';
+				calculationResultsOutput += numberWithCommas(calculatedValue) + '</span></div>';
 			}else{
-				calculationResultsOutput += '<span class="solution">' + numberWithCommas(calculatedValue) + '</span></div>';
+				calculationResultsOutput += '<span class="solution">' + numberWithCommas(calculatedValue) + '</span></span></div>';
 			}
 		}
 	}

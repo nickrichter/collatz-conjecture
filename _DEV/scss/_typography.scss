@@ -108,11 +108,20 @@ input#userInput {
 }
 
 .arithmatic {
-		font-family:  var.$font-family--numbers;
-		font-size: 80%;
-		text-align: left;
-		text-wrap: pretty;
-	}
+	font-family:  var.$font-family--numbers;
+	font-size: 80%;
+	line-height: 1;
+	text-align: left;
+	text-wrap: pretty;
+}
+
+.arithmatic::before {
+	color: var.$color--gray;
+	content: counter(steps-counter) '.';
+	font-size: 50%;
+	line-height: 1;
+	text-align: right;
+}
 
 .numbers {
 	font-family:  var.$font-family--numbers;
