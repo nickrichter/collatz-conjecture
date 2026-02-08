@@ -1,7 +1,7 @@
 let calculationResultsOutput, myInputNum;
 let myInput = document.getElementById('userInput');
 let calculationSteps = document.getElementById('calculation-steps--user-input');
-let inputMaxDigits = 10;
+let inputMaxDigits = document.getElementById('userInput').getAttribute('maxlength');
 let conjectureEndpoint = 1;
 
 

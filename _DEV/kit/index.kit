@@ -21,10 +21,10 @@
 		<section id="input-form">
 			<h2>Try it out.</h2>
 			
-			<p class="small"><small><span class="highlight">Please note:</span> For the sake of reducing compute time and load, I have set this up to limit the input to a maximum of ten digits. If you want to try this out for yourself without such limits, <a href="https://github.com/nickrichter/collatz-conjecture" target="ccout">clone this repository</a>, remove or increase the limits, and upload it to your own server.</small></p>
+			<p class="small"><small><span class="highlight">Please note:</span> Due to limitations with how JavaScript handles integers, I have set this up to limit the input to a maximum of 15 digits. If you want to try this out for yourself without such limits, <a href="https://github.com/nickrichter/collatz-conjecture" target="ccout">clone this repository</a>, remove or increase the limits, and upload it to your own server.</small></p>
 			
-			<span id="error--digits-maximum" class="hide">Please enter a number with fewer than ten digits.</span><!-- /#error--unique-digits -->
-			<input type="text" id="userInput" name="userInput" maxlength="10" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+			<span id="error--digits-maximum" class="hide">Please enter a number with fewer than 15 digits.</span>
+			<input type="text" id="userInput" name="userInput" maxlength="15" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 			<button id="button--start-calculation">Go</button>
 		</section><!-- /#input-form -->
 		
