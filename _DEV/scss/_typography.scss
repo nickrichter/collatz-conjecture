@@ -53,10 +53,10 @@ p {
 	margin: 0 0 2rem;
 	padding: 0;
 	text-wrap: pretty;
-	
+
 	&.callout {
 		font-size: 120%;
-		
+
 		&:last-of-type {
 			margin-bottom: 2rem;
 		}
@@ -68,7 +68,7 @@ small,
 	font-size: 75%;
 	font-weight:  var.$font-weight--normal;
 	line-height: 1;
-	
+
 	p & {
 		line-height: 1.1;
 	}
@@ -95,16 +95,14 @@ input#userInput {
 }
 
 [id^='calculation-steps--'] {
-	
+
 	> div {
-		
+
 		&::after {
 			font-family:  var.$font-family--numbers;
 			font-size: 4rem;
 		}
 	}
-	
-	
 }
 
 .arithmatic {
@@ -128,9 +126,9 @@ input#userInput {
 }
 
 .recommendations {
-	
+
 	ul {
-		
+
 		li {
 			font-size: 0.9rem;
 			line-height: 1;
@@ -142,22 +140,16 @@ input#userInput {
 
 
 // BREAKPOINTS
-@include mxn.media(sm) {}
-
 @include mxn.media(md) {
-	
+
 	h1 {
 		font-size: 300%;
 	}
 }
 
 @include mxn.media(lg) {
-	
+
 	h1 {
 		font-size: 325%;
 	}
 }
-
-@include mxn.media(xl) {}
-
-@include mxn.media(xxl) {}
